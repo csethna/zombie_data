@@ -51,3 +51,32 @@ source = ColumnDataSource(
         parties=parties,
     )
 )
+
+output_file('all-las-parties.html')
+
+TOOLS = "hover"
+
+p=figure(
+    title='\"Party\" Disturbance Calls in LA',
+    x_range=weeks,
+    y_range=list(reversed(days)),
+    tools=TOOLS)
+p.plot_width=900
+p.plot_height = 400
+p.toolbar_location='left'
+
+p.rect("week", "day_of_week", 1, 1, source=source, color=color, line_color=None)
+
+p.grid.grid_line_color = None
+p.axis.axis_line_color = None
+p.axis.major_tick_line_color = None
+p.axis.major_label_text_font_size = "10pt"
+p.axis.major_label_standoff = 0
+p.xaxis.major_label_orientation = np.pi/3
+
+hover = p.select(dict(type=HoverTool))
+hover.tooltips = OrderedDict([
+    ('parties', '@parties'),
+])
+
+show(p) # show the plot
