@@ -27,3 +27,27 @@ data = data.fillna(value=0)
 # Get our "weeks" and "days"
 weeks = list(data.index)
 days = ["Mon", "Tues", "Wed", "Thurs", "Fri", "Sat", "Sun"]
+
+# Set up the data for plotting. We will need to have values for every
+# pair of year/month names. Map the rate to a color.
+max_count = raw_data["count"].max()
+day_of_week = []
+week = []
+color = []
+parties = []
+for w in weeks:
+    for idx, day in enumerate(days):
+        day_of_week.append(day)
+        week.append(w)
+        count = data.loc[w][idx]
+        parties.append(count)
+        color.append("#%02x%02x%02x" % (255, 255 - (count / max_count) * 255.0, 255 - (count / max_count) * 255.0))
+
+source = ColumnDataSource(
+    data=dict(
+        day_of_week=day_of_week,
+        week=week,
+        color=color,
+        parties=parties,
+    )
+)
