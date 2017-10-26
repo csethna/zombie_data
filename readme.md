@@ -6,5 +6,5 @@ In this exercise, we will be playing [Dr. Robert Neville](http://imlegend.wikia.
 
 Upon identification of a zombie dataset, the team will work quickly to administer GA-series Serum 391, [Compound 6](http://imlegend.wikia.com/wiki/Compound_6). This means devising a use case for which the dataset could provide meaningful insights and, time allowing, creating MVP in order to demonstrate a potential application for the data.
 
-- [Least accessed City of Chicago public datasets](https://data.cityofchicago.org/browse?limitTo=datasets&page=17)
-- [Least accessed US Federal Government public datasets](https://catalog.data.gov/dataset?page=9899)
+- [Least accessed **City of Chicago** public datasets](https://data.cityofchicago.org/browse?limitTo=datasets&page=17)
+- [Least accessed **Federal Government** public datasets](https://catalog.data.gov/dataset?page=9899)
