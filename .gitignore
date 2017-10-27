@@ -1,2 +1,5 @@
 .zombie
 .gitattributes
+pandas-fundamentals/
+pandas_tutorial.py
+.DS_Store
