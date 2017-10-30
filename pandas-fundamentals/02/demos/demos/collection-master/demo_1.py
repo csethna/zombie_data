@@ -19,4 +19,6 @@ COLS_TO_USE = ['id', 'artist', 'title', 'medium', 'year', 'acquisitionYear', 'he
 # Proper data loading
 df = pd.read_csv(CSV_PATH, usecols=COLS_TO_USE, index_col='id')
 
+# Save for later
+df.to_pickle(os.path.join('..', 'data_frame.pickle'))
 print(df)
