@@ -13,4 +13,10 @@ df = pd.read_csv(CSV_PATH, nrows=5, index_col='id')
 # Limit columns
 df = pd.read_csv(CSV_PATH, nrows=5, index_col='id', usecols=['id', 'artist'])
 
+# All columns that we need
+COLS_TO_USE = ['id', 'artist', 'title', 'medium', 'year', 'acquisitionYear', 'height', 'width', 'units']
+
+# Proper data loading
+df = pd.read_csv(CSV_PATH, usecols=COLS_TO_USE, index_col='id')
+
 print(df)
