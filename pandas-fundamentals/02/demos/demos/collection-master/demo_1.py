@@ -10,4 +10,7 @@ df = pd.read_csv(CSV_PATH, nrows=5)
 # Specify an Index
 df = pd.read_csv(CSV_PATH, nrows=5, index_col='id')
 
+# Limit columns
+df = pd.read_csv(CSV_PATH, nrows=5, index_col='id', usecols=['id', 'artist'])
+
 print(df)
