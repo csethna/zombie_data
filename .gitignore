@@ -1,2 +1,4 @@
 .zombie
 .gitattributes
+pandas-fundamentals/
+.DS_Store
